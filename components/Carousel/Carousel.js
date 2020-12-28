@@ -1,15 +1,41 @@
 import {useEffect, useState} from 'react'
 import styles from './carousel.module.css'
-import {SLIDES} from '../../Content.js'
+import Image from 'next/image'
+
+const slides = [
+    "/images/hanyang_outside.JPG",
+    "/images/interior1.JPG",
+    "/images/food1.JPG",
+    "/images/interior2.JPG",
+    "/images/hanyang_inside.JPG",
+    "/images/food2.JPG",
+  ]
+
+// export async function getStaticProps() {
+//     // Get external data from the file system, API, DB, etc.
+//     const slides = [
+//         "/images/hanyang_outside.JPG",
+//         "/images/interior1.JPG",
+//         "/images/food1.JPG",
+//         "/images/interior2.JPG",
+//         "/images/hanyang_inside.JPG",
+//         "/images/food2.JPG",
+//       ]
+
+//     return {
+//       props: slides
+//     }
+//   }
 
 export default function Carousel() {
   const {carouselImg, activeSlide, carouselContainer, slide, hiddenSlide} = styles
   const [slideIndex, setslideIndex] = useState(0)
 
     useEffect(() => {
+        console.log(window.innerHeight)
         let i = slideIndex
         const slideInterval = setInterval(() => {
-            if(i === (SLIDES.length-1)) {
+            if(i === (slides.length-1)) {
                 setslideIndex(0)
                 i = 0
             }
@@ -48,7 +74,7 @@ export default function Carousel() {
 
     return(
         <section className={carouselContainer}>
-            {SLIDES.map((item, index) => {
+            {slides.map((item, index) => {
                 return (
                     <div key={index} className={`${[slide, hiddenSlide].join(' ')} slide-${index}`}>
                         <img className={carouselImg} src={item} alt="Carousel Image"/>
