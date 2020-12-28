@@ -1,0 +1,116 @@
+.menu_section{
+  scroll-margin: 60px;
+  width:100%;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-bottom: 7px dotted #14A651;
+}
+.menu_container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* menu link button style */
+.menu_category{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  font-size: 42px;
+  font-weight: bold;
+  width: 99%;
+  height: 50%;
+}
+
+.menu_category_main:link, .menu_category_main:visited {
+  color: #14A651;
+}
+
+.menu_category_side:link, .menu_category_side:visited {
+  color: #2E3690;
+}
+
+
+.menu_category_main:hover, .menu_category:active{
+  transition: 0.5s;
+  background-color: #14A651;
+  color: white;
+}
+
+.menu_category_side:hover, .menu_category:active{
+  transition: 0.5s;
+  background-color: #2E3690;
+  color: white;
+}
+
+.menu_header {
+  margin-bottom: 100px;
+  padding-top: 20px;
+  font-size: 42px;
+}
+
+.availability_container{
+  width: 50%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-left: 7px dotted #2E3690;
+}
+
+.availability_header {
+  font-size: 42px;
+  margin: 20px 0;
+}
+
+.availability_text{
+  font-size: 24px;
+}
+
+.availability_text > strong {
+  font-size: 24px;
+}
+
+@media screen and (max-width: 750px) {
+  .menu_section {
+    scroll-margin: 50px;
+    border-bottom: none;
+  }
+
+  .availability_container {
+    border-left: none;
+  }
+
+  .availability_container .availability_header {
+    font-size: 20px;
+  }
+
+  .availability_container .availability_text {
+    font-size: 12px;
+  }
+
+  .availability_container .availability_text_hours {
+    font-size: 20px;
+  }
+
+  .menu_container .menu_category {
+    font-size: 20px;
+  }
+
+  .menu_container .menu_category_main:link, .menu_container .menu_category_main:visited {
+    background-color: #14A651;
+    color: white;
+  }
+
+  .menu_container .menu_category_side:link, .menu_container .menu_category_side:visited {
+      background-color: #2E3690;
+      color: white;
+  }
+}

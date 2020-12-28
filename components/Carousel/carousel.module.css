@@ -1,0 +1,55 @@
+.carouselImg{
+  width: 100%;
+  height: auto;
+}
+
+.carouselContainer{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  display:flex;
+  align-self: center;
+}
+
+.slide{
+  position: absolute;
+  top:0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.activeSlide{
+  opacity: 1;
+  transition: 2s;
+  visibility: visible;
+}
+
+.hiddenSlide{
+  opacity: 0;
+  transition: 2s;
+  visibility: hidden;
+}
+
+@media screen and (max-width: 750px) {
+  .carouselContainer, .slide {
+    height: 40vh;
+  }
+
+  .carouselImg {
+    height: 40vh;
+  }
+}
+
+@media screen and (max-width: 1050px) and (min-width: 751px) {
+  .carouselContainer, .slide {
+    height: 50vh;
+  }
+
+  .carouselImg {
+    height: 50vh;
+  }
+}
