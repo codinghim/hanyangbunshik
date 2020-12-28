@@ -1,12 +1,15 @@
 {
   "name": "hanyangbunshik",
   "version": "0.1.0",
+  "description": "Hanyang Bunshik Official Website",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
   },
+  "author": "Magi",
+  "license": "MIT",
   "dependencies": {
     "next": "10.0.4",
     "react": "17.0.1",
