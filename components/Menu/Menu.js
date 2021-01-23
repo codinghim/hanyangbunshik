@@ -5,8 +5,8 @@ export default function Menu() {
   return(
     <section id="Menu" className={menu_section}>
          <div className={menu_container}>
-            <a className={`${[menu_category, menu_category_main].join(' ')}`} target="_blank" href="/menu/menu1.pdf">Main Menu</a>
-            <a className={`${[menu_category, menu_category_side].join(' ')}`} target="_blank" href="/menu/menu2.pdf">Side Menu</a>
+            <a className={`${[menu_category, menu_category_main].join(' ')}`} target="_blank" href="/menu/menu_updated.pdf">Menu</a>
+            {/* <a className={`${[menu_category, menu_category_side].join(' ')}`} target="_blank" href="/menu/menu2.pdf">Side Menu</a> */}
         </div>
         <div className={availability_container}>
             <h2 className={availability_header}>Open Hours</h2>
